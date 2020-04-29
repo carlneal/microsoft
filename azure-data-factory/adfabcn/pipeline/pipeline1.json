@@ -1,0 +1,19 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "WebHook1",
+				"type": "WebHook",
+				"typeProperties": {
+					"url": "https://s1events.azure-automation.net/webhooks?token=stB2gEVRitN0Ammv9TEToyyMHzRvWxfzFXrqfkyD3YU%3d",
+					"method": "POST",
+					"body": {
+						"message": "Run Book Executed"
+					},
+					"timeout": "00:10:00"
+				}
+			}
+		]
+	}
+}

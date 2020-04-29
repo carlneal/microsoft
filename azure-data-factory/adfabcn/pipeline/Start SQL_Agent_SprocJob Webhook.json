@@ -1,0 +1,20 @@
+{
+	"name": "Start SQL_Agent_SprocJob Webhook",
+	"properties": {
+		"activities": [
+			{
+				"name": "Start SQL_Agent_SprocJob Webhook",
+				"type": "WebHook",
+				"typeProperties": {
+					"url": "https://s1events.azure-automation.net/webhooks?token=YEwURgXyrVeo2gi8OvQeLlaPGwe7Q%2ftrwP9ngb7vRrg%3d",
+					"method": "POST",
+					"body": {
+						"message": "Run Book Executed"
+					},
+					"timeout": "00:10:00"
+				}
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

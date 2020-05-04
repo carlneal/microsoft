@@ -1,0 +1,22 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions-1.0.29",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "connectionStringSetting": "CosmosDbConnectionString",
+      "leaseCollectionName": "lease",
+      "createLeaseCollectionIfNotExists": true,
+      "collectionName": "productMeta",
+      "databaseName": "webstore-v4",
+      "leaseDatabaseName": "webstore-v4",
+      "startFromBeginning": false,
+      "useMultipleWriteLocations": false,
+      "useDefaultJsonSerialization": false,
+      "name": "documents"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/WebStoreAzureFunctions.dll",
+  "entryPoint": "WebStoreAzureFunctions.SyncProductMetadataV4.SyncProductMetadata"
+}

@@ -329,7 +329,7 @@ function Get-Catalog
             $catalogServerName = Get-ServerNameFromAlias $catalogAlias
 
             # Find catalog server in Azure 
-            $catalogServer = Find-AzureRmResource -ResourceNameEquals $catalogServerName -ResourceType "Microsoft.Sql/servers"
+            $catalogServer = Get-AzureRmResource -Name $catalogServerName -ResourceType "Microsoft.Sql/servers"
             $fullyQualifiedServerName = $catalogServer.Name + ".database.windows.net"
 
             # Check catalog database exists
@@ -413,7 +413,7 @@ function Get-DatabasesForTenant
     $tenantServerName = $fullyQualifiedTenantServerName.split('.')[0]
 
     # Find tenant server in Azure 
-    $tenantServer = Find-AzureRmResource -ResourceNameEquals $tenantServerName -ResourceType "Microsoft.Sql/servers"
+    $tenantServer = Get-AzureRmResource -Name $tenantServerName -ResourceType "Microsoft.Sql/servers"
 
     # Get active tenant database 
     $activeTenantDatabase = Get-AzureRmSqlDatabase `
@@ -691,7 +691,7 @@ function Get-Tenant
     $tenantDatabaseName = $tenantShard.Shard.Location.Database
 
     # Find tenant server in Azure 
-    $tenantServer = Find-AzureRmResource -ResourceNameEquals $tenantServerName -ResourceType "Microsoft.Sql/servers"
+    $tenantServer = Get-AzureRmResource -ResourceNameEquals $tenantServerName -ResourceType "Microsoft.Sql/servers"
 
     $tenantDatabase = Get-AzureRmSqlDatabase `
         -ResourceGroupName $tenantServer.ResourceGroupName `
@@ -804,7 +804,7 @@ function Get-TenantDatabaseForRestorePoint
     $tenantServerName = $fullyQualifiedTenantServerName.split('.')[0]
 
     # Find tenant server in Azure 
-    $tenantServer = Find-AzureRmResource -ResourceNameEquals $tenantServerName -ResourceType "Microsoft.Sql/servers"
+    $tenantServer = Get-AzureRmResource -Name $tenantServerName -ResourceType "Microsoft.Sql/servers"
     
     # Get active database for tenant 
     $tenantDatabase = Get-AzureRmSqlDatabase `
@@ -1768,7 +1768,7 @@ function Remove-Tenant
     $tenantServerName = $fullyQualifiedTenantServerName.split('.')[0]
 
     # Find tenant server in Azure 
-    $tenantServer = Find-AzureRmResource -ResourceNameEquals $tenantServerName -ResourceType "Microsoft.Sql/servers"
+    $tenantServer = Get-AzureRmResource -Name $tenantServerName -ResourceType "Microsoft.Sql/servers"
 
     # Delete catalog mapping for tenant
     try 
@@ -1835,7 +1835,7 @@ function Remove-TenantDatabaseForRestore
     $tenantServerName = $fullyQualifiedTenantServerName.split('.')[0] 
 
     # Find tenant server in Azure 
-    $tenantServer = Find-AzureRmResource -ResourceNameEquals $tenantServerName -ResourceType "Microsoft.Sql/servers"
+    $tenantServer = Get-AzureRmResource -Name $tenantServerName -ResourceType "Microsoft.Sql/servers"
 
     $activeTenantDatabase = Get-AzureRmSqlDatabase `
                                 -ResourceGroupName $tenantServer.ResourceGroupName `
@@ -1942,7 +1942,7 @@ function Rename-TenantDatabase
     $tenantServerName = $fullyQualifiedTenantServerName.split('.')[0]
 
     # Find tenant server in Azure 
-    $tenantServer = Find-AzureRmResource -ResourceNameEquals $tenantServerName -ResourceType "Microsoft.Sql/servers"
+    $tenantServer = Get-AzureRmResource -Name $tenantServerName -ResourceType "Microsoft.Sql/servers"
 
     # Choose active tenant database as database to rename if no database specified 
     if (!$TenantDatabaseObject)

@@ -6,7 +6,7 @@ $DurationMinutes = 120
 # For the Single Tenant scenario (5), this is the tenant database that will have the high load applied.
 $SingleTenantDatabaseName = "contosoconcerthall"
 
-$DemoScenario = 0
+$DemoScenario = 6
 <# Select the scenario to run 
    Scenario
       0     None

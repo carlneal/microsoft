@@ -1,0 +1,6 @@
+c:\users\owend\documents\visual studio 2015\projects\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\bin\Model.asdatabase
+c:\users\owend\documents\visual studio 2015\projects\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\bin\Model.deploymenttargets
+c:\users\owend\documents\visual studio 2015\projects\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\bin\Model.deploymentoptions
+c:\users\owend\documents\visual studio 2015\projects\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\obj\Development\Model.asdatabase
+c:\users\owend\documents\visual studio 2015\projects\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\obj\Development\Model.deploymentoptions
+c:\users\owend\documents\visual studio 2015\projects\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\obj\Development\Model.deploymenttargets

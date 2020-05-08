@@ -1,13 +1,13 @@
 {
   "name": "SemanticModel",
-  "compatibilityLevel": 1200,
+  "compatibilityLevel": 1400,
   "model": {
     "culture": "en-US",
     "dataSources": [
       {
         "name": "Adventure Works DB from SQL",
-        "connectionString": "Provider=SQLNCLI11;Data Source=localhost;Initial Catalog=AdventureWorksDW2014;Integrated Security=SSPI;Persist Security Info=false",
-        "impersonationMode": "impersonateCurrentUser",
+        "connectionString": "Provider=SQLNCLI11;Data Source=nealazsqldb.database.windows.net;Initial Catalog=AdventureWorksDW2014;Persist Security Info=true;User ID=cneal",
+        "impersonationMode": "impersonateServiceAccount",
         "annotations": [
           {
             "name": "ConnectionEditUISource",
@@ -186,6 +186,7 @@
             "name": "Customer",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [dbo].[DimCustomer].[CustomerKey],[dbo].[DimCustomer].[GeographyKey],[dbo].[DimCustomer].[CustomerAlternateKey],[dbo].[DimCustomer].[Title],[dbo].[DimCustomer].[FirstName],[dbo].[DimCustomer].[MiddleName],[dbo].[DimCustomer].[LastName],[dbo].[DimCustomer].[NameStyle],[dbo].[DimCustomer].[BirthDate],[dbo].[DimCustomer].[MaritalStatus],[dbo].[DimCustomer].[Suffix],[dbo].[DimCustomer].[Gender],[dbo].[DimCustomer].[EmailAddress],[dbo].[DimCustomer].[YearlyIncome],[dbo].[DimCustomer].[TotalChildren],[dbo].[DimCustomer].[NumberChildrenAtHome],[dbo].[DimCustomer].[EnglishEducation],[dbo].[DimCustomer].[EnglishOccupation],[dbo].[DimCustomer].[HouseOwnerFlag],[dbo].[DimCustomer].[NumberCarsOwned],[dbo].[DimCustomer].[AddressLine1],[dbo].[DimCustomer].[AddressLine2],[dbo].[DimCustomer].[Phone],[dbo].[DimCustomer].[DateFirstPurchase],[dbo].[DimCustomer].[CommuteDistance] FROM [dbo].[DimCustomer] ",
               "dataSource": "Adventure Works DB from SQL"
             },
@@ -1360,6 +1361,7 @@
             "name": "Date",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [dbo].[DimDate].[FullDateAlternateKey],[dbo].[DimDate].[DayNumberOfWeek],[dbo].[DimDate].[EnglishDayNameOfWeek],[dbo].[DimDate].[DayNumberOfMonth],[dbo].[DimDate].[DayNumberOfYear],[dbo].[DimDate].[WeekNumberOfYear],[dbo].[DimDate].[EnglishMonthName],[dbo].[DimDate].[MonthNumberOfYear],[dbo].[DimDate].[CalendarQuarter],[dbo].[DimDate].[CalendarYear],[dbo].[DimDate].[CalendarSemester],[dbo].[DimDate].[FiscalQuarter],[dbo].[DimDate].[FiscalYear],[dbo].[DimDate].[FiscalSemester] FROM [dbo].[DimDate] ",
               "dataSource": "Adventure Works DB from SQL"
             },
@@ -2269,6 +2271,7 @@
             "name": "Geography",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [dbo].[DimGeography].[GeographyKey],[dbo].[DimGeography].[City],[dbo].[DimGeography].[StateProvinceCode],[dbo].[DimGeography].[StateProvinceName],[dbo].[DimGeography].[CountryRegionCode],[dbo].[DimGeography].[EnglishCountryRegionName],[dbo].[DimGeography].[PostalCode],[dbo].[DimGeography].[SalesTerritoryKey] FROM [dbo].[DimGeography] ",
               "dataSource": "Adventure Works DB from SQL"
             },
@@ -2938,6 +2941,7 @@
             "name": "Product",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [dbo].[DimProduct].[ProductKey],[dbo].[DimProduct].[ProductAlternateKey],[dbo].[DimProduct].[ProductSubcategoryKey],[dbo].[DimProduct].[WeightUnitMeasureCode],[dbo].[DimProduct].[SizeUnitMeasureCode],[dbo].[DimProduct].[EnglishProductName],[dbo].[DimProduct].[StandardCost],[dbo].[DimProduct].[FinishedGoodsFlag],[dbo].[DimProduct].[Color],[dbo].[DimProduct].[SafetyStockLevel],[dbo].[DimProduct].[ReorderPoint],[dbo].[DimProduct].[ListPrice],[dbo].[DimProduct].[Size],[dbo].[DimProduct].[SizeRange],[dbo].[DimProduct].[Weight],[dbo].[DimProduct].[DaysToManufacture],[dbo].[DimProduct].[ProductLine],[dbo].[DimProduct].[DealerPrice],[dbo].[DimProduct].[Class],[dbo].[DimProduct].[Style],[dbo].[DimProduct].[ModelName],[dbo].[DimProduct].[LargePhoto],[dbo].[DimProduct].[EnglishDescription],[dbo].[DimProduct].[StartDate],[dbo].[DimProduct].[EndDate],[dbo].[DimProduct].[Status] FROM [dbo].[DimProduct] ",
               "dataSource": "Adventure Works DB from SQL"
             },
@@ -4376,6 +4380,7 @@
             "name": "Product Category",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [dbo].[DimProductCategory].[ProductCategoryKey],[dbo].[DimProductCategory].[ProductCategoryAlternateKey],[dbo].[DimProductCategory].[EnglishProductCategoryName] FROM [dbo].[DimProductCategory] ",
               "dataSource": "Adventure Works DB from SQL"
             },
@@ -4673,6 +4678,7 @@
             "name": "Product Subcategory",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [dbo].[DimProductSubcategory].[ProductSubcategoryKey],[dbo].[DimProductSubcategory].[ProductSubcategoryAlternateKey],[dbo].[DimProductSubcategory].[EnglishProductSubcategoryName],[dbo].[DimProductSubcategory].[ProductCategoryKey] FROM [dbo].[DimProductSubcategory] ",
               "dataSource": "Adventure Works DB from SQL"
             },
@@ -5181,6 +5187,7 @@
           {
             "name": "Internet Sales 2010",
             "source": {
+              "type": "query",
               "query": [
                 "SELECT   ",
                 "[dbo].[FactInternetSales].[ProductKey],  ",
@@ -5249,6 +5256,7 @@
             "name": "Internet Sales 2011",
             "mode": "import",
             "source": {
+              "type": "query",
               "query": [
                 "SELECT   ",
                 "[dbo].[FactInternetSales].[ProductKey],  ",
@@ -5317,6 +5325,7 @@
             "name": "Internet Sales 2012",
             "mode": "import",
             "source": {
+              "type": "query",
               "query": [
                 "SELECT   ",
                 "[dbo].[FactInternetSales].[ProductKey],  ",
@@ -5383,6 +5392,7 @@
             "name": "Internet Sales 2013",
             "mode": "import",
             "source": {
+              "type": "query",
               "query": [
                 "SELECT   ",
                 "[dbo].[FactInternetSales].[ProductKey],  ",
@@ -5449,6 +5459,7 @@
             "name": "Internet Sales 2014",
             "mode": "import",
             "source": {
+              "type": "query",
               "query": [
                 "SELECT   ",
                 "[dbo].[FactInternetSales].[ProductKey],  ",
@@ -6611,7 +6622,7 @@
     "annotations": [
       {
         "name": "ClientCompatibilityLevel",
-        "value": "400"
+        "value": "500"
       }
     ]
   },

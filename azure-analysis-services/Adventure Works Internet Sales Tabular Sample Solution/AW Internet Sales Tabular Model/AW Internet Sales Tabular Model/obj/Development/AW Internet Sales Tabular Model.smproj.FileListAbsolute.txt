@@ -4,3 +4,9 @@ c:\users\owend\documents\visual studio 2015\projects\AW Internet Sales Tabular M
 c:\users\owend\documents\visual studio 2015\projects\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\obj\Development\Model.asdatabase
 c:\users\owend\documents\visual studio 2015\projects\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\obj\Development\Model.deploymentoptions
 c:\users\owend\documents\visual studio 2015\projects\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\obj\Development\Model.deploymenttargets
+C:\Users\cneal\Documents\GIT\microsoft\azure-analysis-services\Adventure Works Internet Sales Tabular Sample Solution\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\bin\Model.asdatabase
+C:\Users\cneal\Documents\GIT\microsoft\azure-analysis-services\Adventure Works Internet Sales Tabular Sample Solution\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\bin\Model.deploymenttargets
+C:\Users\cneal\Documents\GIT\microsoft\azure-analysis-services\Adventure Works Internet Sales Tabular Sample Solution\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\bin\Model.deploymentoptions
+C:\Users\cneal\Documents\GIT\microsoft\azure-analysis-services\Adventure Works Internet Sales Tabular Sample Solution\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\obj\Development\Model.asdatabase
+C:\Users\cneal\Documents\GIT\microsoft\azure-analysis-services\Adventure Works Internet Sales Tabular Sample Solution\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\obj\Development\Model.deploymentoptions
+C:\Users\cneal\Documents\GIT\microsoft\azure-analysis-services\Adventure Works Internet Sales Tabular Sample Solution\AW Internet Sales Tabular Model\AW Internet Sales Tabular Model\obj\Development\Model.deploymenttargets
